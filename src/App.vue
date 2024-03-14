@@ -7,6 +7,7 @@
   <main>
     <router-view />
   </main>
+  
 </template>
 
 <style>
@@ -19,3 +20,41 @@
   margin-top: 60px;
 }
 </style>
+<script>
+
+
+import {ref, onMounted} from 'vue'
+import TodoList from './views/TodoList.vue'
+import axios from 'axios'
+export default {
+  name: 'App',
+  components:{
+    
+  },
+  // setup()
+  // {
+  //   const data=ref([]);
+  //   const fetchData= async()=>{
+  //     try{
+  //       const response= await axios.get("https://jsonplaceholder.typicode.com/todos");
+  //       data.value=response.data;
+  //       console.log(response.data);
+  //     }
+  //     catch(error){
+  //       console.log("Error fetching data");
+  //     }
+
+
+  //   }
+  //   onMounted(()=>{
+  //     fetchData();
+  //   })
+
+  //   return {
+  //     data
+  //   };
+  // }
+
+}
+</script>
+

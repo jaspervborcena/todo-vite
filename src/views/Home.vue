@@ -1,40 +1,34 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
+// import { useCounterStore } from '../stores/counter'
 
-const count = ref(0)
+// const counter = useCounterStore()
 
+// counter.count++
+// // with autocompletion ✨
+// counter.$patch({ count: counter.count + 1 })
+// // or using an action instead
+// counter.increment()
 </script>
 
 <template>
-home
-  <h1>{{ msg }}</h1>
-
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <!-- Access the state directly from the store -->
+  <!-- <div>Current Count: {{ counter.count }}</div> -->
+ 
+  <div class="welcome">
+    <label>
+        <b>Welcome ToDo App</b>
+      </label>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/vuejs/language-tools" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
+
 
 <style scoped>
 .read-the-docs {
   color: #888;
+}
+.welcome {
+margin-top: 20px;
+
 }
 </style>
